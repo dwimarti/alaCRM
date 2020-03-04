@@ -1,0 +1,19 @@
+server:
+  port: 8383
+spring:
+  datasource:
+    url: jdbc:postgresql://mk-cideng.ddns.net:5432/customerDB?createDatabaseIfNotExist=true
+    username: postgres
+    password: P@ssw0rd
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: ALWAYS
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    show-sql: true
+logging:
+  level:
+    org.springframework.security: TRACE
